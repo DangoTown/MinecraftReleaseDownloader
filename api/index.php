@@ -20,6 +20,7 @@ foreach ($baseData["versions"] as $value)
         $down_value = json_decode(file_get_contents($value["url"]),true);
     //."    下载链接：";
 //    echo $down_value["url"];
+
     $i++;
     ?>
   <tr>
@@ -27,7 +28,7 @@ foreach ($baseData["versions"] as $value)
     <th><?php echo "版本：".$value["id"] ?></th>
     <th><?php echo "类型：".$value["type"] ?></th>
     <th><?php echo "SHA1：".$down_value["downloads"]["server"]["sha1"] ?></th>
-    <th><?php echo "下载链接：".$down_value["downloads"]["server"]["url"] ?></th>
+    <th><a href="<?php echo "下载链接：".$down_value["downloads"]["server"]["url"] ?>">点击下载</a></th>
     <th><?php echo "大小：".$down_value["downloads"]["server"]["size"] ?></th>
   </tr>
 <?php 
