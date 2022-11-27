@@ -28,7 +28,7 @@ foreach ($baseData["versions"] as $value)
     <th><?php echo "类型：".$value["type"] ?></th>
     <th><?php echo "SHA1：".$down_value["downloads"]["server"]["sha1"] ?></th>
     <th><?php echo "下载链接：".$down_value["downloads"]["server"]["url"] ?></th>
-    <th><?php echo "大小：".$down_value["downloads"]["server"]["size"] ?></th>
+    <th><?php echo "大小：".($down_value["downloads"]["server"]["size"]/1024/1024)."MB" ?></th>
   </tr>
 <?php 
 }
