@@ -30,7 +30,7 @@ foreach ($baseData["versions"] as $value)
     <th><?php echo "类型：".$value["type"] ?></th>
     <th><?php echo "SHA1：".$down_value["downloads"]["server"]["sha1"] ?></th>
     <th>下载链接：<a href="<?php echo $down_value["downloads"]["server"]["url"] ?>">点击下载</a></th>
-    <th><?php echo "大小：".$down_value["downloads"]["server"]["size"] ?></th>
+    <th><?php echo "大小：". (($down_value["downloads"]["server"]["size"])/1024)/1024 ?></th>
   </tr>
 <?php 
 }
