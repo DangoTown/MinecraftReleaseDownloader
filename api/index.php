@@ -6,14 +6,12 @@
     <body>
 <?php
 ini_set("error_reporting","E_ALL & ~E_NOTICE");
-//echo phpinfo();
 $baseUrl="https://piston-meta.mojang.com/mc/game/version_manifest.json";
 $baseData = json_decode(file_get_contents($baseUrl),true);
-//$baseData = json_decode(file_get_contents("./version_manifest.json"),true);
 echo "最新正式版：  ".$baseData['latest']['release'];
-echo "<br />";
+echo "<hr />";
 echo "最新快照版：  ".$baseData['latest']['snapshot'];
-echo "<br />";
+echo "<hr />";
 echo "<table border=\"1\">";
 foreach ($baseData["versions"] as $value)
 {
